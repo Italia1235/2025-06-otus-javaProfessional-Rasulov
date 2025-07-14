@@ -1,6 +1,3 @@
-
-
-
 plugins{
     id("io.spring.dependency-management")
 }
@@ -22,4 +19,9 @@ dependencyManagement {
         dependency("com.google.guava:guava:$guava")
     }
 }
+    tasks.withType<JavaCompile> {
+        options.encoding = "UTF-8"
+        options.compilerArgs.addAll(listOf("-Xlint:all,-serial,-processing"))
+    }
+
 }
