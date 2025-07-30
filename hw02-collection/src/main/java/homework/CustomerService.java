@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 
 public class CustomerService {
-    NavigableMap <Customer, String> map =new TreeMap<>(
+    private final NavigableMap <Customer, String> map =new TreeMap<>(
             Comparator.comparingLong(Customer::getScores)
 
     );
