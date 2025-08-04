@@ -1,6 +1,8 @@
 rootProject.name = "HWOTUS"
 include("hw01-gradle")
 include("hw02-collection")
+include("hw03-annotations")
+
 
 pluginManagement {
     val johnrengelmanShadow: String by settings
