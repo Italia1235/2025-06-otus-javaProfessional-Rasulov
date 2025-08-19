@@ -2,6 +2,7 @@ rootProject.name = "HWOTUS"
 include("hw01-gradle")
 include("hw02-collection")
 include("hw03-annotations")
+include("hw04-gc")
 
 
 pluginManagement {
