@@ -1,0 +1,15 @@
+64 - spend msec:267035, sec:267
+256 - spend msec:220966, sec:220
+512 - spend msec:221438, sec:221
+1024 - spend msec:222519, sec:222
+2048 - spend msec:223523, sec:223
+4092 - spend msec:217141, sec:217
+8052 - spend msec:212640, sec:212
+
+------
+after optimization
+64 - spend msec:5484, sec:5
+512- spend msec:5435, sec:5
+1024 - spend msec:5140, sec:5
+2048 - spend msec:5241, sec:5
+8052 - spend msec:14013, sec:14
