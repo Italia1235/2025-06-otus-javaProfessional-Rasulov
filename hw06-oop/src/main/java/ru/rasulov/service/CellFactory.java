@@ -3,6 +3,7 @@ package ru.rasulov.service;
 import ru.rasulov.interfaces.CalculationStrategy;
 import ru.rasulov.interfaces.Cell;
 import ru.rasulov.interfaces.ValidationCellStrategy;
+
 import ru.rasulov.model.BasicCell;
 import ru.rasulov.model.Nominal;
 import ru.rasulov.strategy.DefaultValidationCellStrategy;
