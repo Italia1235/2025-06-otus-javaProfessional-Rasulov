@@ -7,10 +7,14 @@ include("hw05-bytecode")
 include("hw06-oop")
 include("hw07-patterns")
 include("hw08-io")
+include("hw09-jdbc:demo")
+include("hw09-jdbc:homework")
+
 pluginManagement {
     val johnrengelmanShadow: String by settings
     val dependencyManagement: String by settings
     val springframeworkBoot: String by settings
+
 
     plugins {
         id("io.spring.dependency-management") version dependencyManagement
