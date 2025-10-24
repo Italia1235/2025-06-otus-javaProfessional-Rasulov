@@ -65,18 +65,14 @@ public class Client implements Cloneable {
 
     @Override
     public String toString() {
-        return "Client{id=%d, name='%s', address=%s, phones=%s}".formatted(id, name, address, phones);
+        return "Client{" + "id=" + id + ", name='" + name + '\'' + '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Client client = (Client) o;
-        return Objects.equals(id, client.id)
-                && Objects.equals(name, client.name)
-                && Objects.equals(address, client.address)
-                && Objects.equals(phones, client.phones);
+        if (!(o instanceof Client client)) return false;
+        return Objects.equals(getId(), client.getId()) && Objects.equals(getName(), client.getName());
     }
 
     @Override
