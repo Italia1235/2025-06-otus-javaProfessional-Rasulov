@@ -9,7 +9,7 @@ include("hw07-patterns")
 include("hw08-io")
 include("hw09-jdbc:demo")
 include("hw09-jdbc:homework")
-
+include("hw10-jpql:homework-template")
 pluginManagement {
     val johnrengelmanShadow: String by settings
     val dependencyManagement: String by settings
