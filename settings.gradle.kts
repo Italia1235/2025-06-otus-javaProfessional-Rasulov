@@ -13,7 +13,7 @@ include("hw10-jpql:homework-template")
 include("hw11-cache:demo")
 include("hw11-cache:homework")
 include("hw12-webserver")
-
+include("hw13-di")
 pluginManagement {
     val johnrengelmanShadow: String by settings
     val dependencyManagement: String by settings
