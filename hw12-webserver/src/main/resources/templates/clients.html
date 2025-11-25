@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients List</title>
+
+</head>
+<body>
+<div class="header">
+    <h1>Clients Management System</h1>
+</div>
+<div class="sidebar">
+    <form action="client/create" method="post">
+        <label>
+            Name <br/>
+            <input class="input" type="text" name="name">
+        </label><br/>
+        <label>
+            Address <br/>
+            <input class="input" type="text" name="address">
+        </label><br/>
+        <label for="phones">Phones:</label><br/>
+        <textarea id="phones" name="phones" rows="5" cols="32"></textarea>
+        <br/><br/>
+        <input type="submit" value="Create new">
+    </form>
+</div>
+<div class="container">
+    <#if clients?? && clients?size gt 0>
+    <table class="clients-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <#list clients as client>
+        <tr>
+            <td class="client-id">${client.id}</td>
+            <td class="client-name">${client.name}</td>
+            <td class="client-name"><#if client.address??>${client.address.street}</#if></td>
+            <td class="client-name"><#if client.phones?? && client.phones?size gt 0>${client.phones[0].number}</#if></td>
+        </tr>
+        </#list>
+        </tbody>
+    </table>
+    <#else>
+    <div class="no-clients">
+        No clients found.
+    </div>
+</#if>
+</div>
+</body>
+</html>

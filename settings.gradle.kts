@@ -12,7 +12,7 @@ include("hw09-jdbc:homework")
 include("hw10-jpql:homework-template")
 include("hw11-cache:demo")
 include("hw11-cache:homework")
-
+include("hw12-webserver")
 
 pluginManagement {
     val johnrengelmanShadow: String by settings
