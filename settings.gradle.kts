@@ -14,6 +14,7 @@ include("hw11-cache:demo")
 include("hw11-cache:homework")
 include("hw12-webserver")
 include("hw13-di")
+include("hw14-spring")
 pluginManagement {
     val johnrengelmanShadow: String by settings
     val dependencyManagement: String by settings
