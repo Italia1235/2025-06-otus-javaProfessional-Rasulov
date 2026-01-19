@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <script src="/static/js/clients.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients List</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .sidebar { float: left; width: 30%; padding: 20px; }
+        .container { float: left; width: 70%; padding: 20px; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Clients Management System</h1>
+</div>
+<div class="sidebar">
+    <form  class="new-client-form" onsubmit="createClient(event)">
+        <fieldset class="new-client-field">
+            <label>
+                Name <br/>
+                <input class="input" type="text" name="name">
+            </label><br/>
+            <label>
+                Address <br/>
+                <input class="input" type="text" name="address">
+            </label><br/>
+            <label for="phones">Phones:</label><br/>
+            <textarea id="phones" name="phones" rows="5" cols="32"></textarea>
+            <br/><br/>
+            <input type="submit" value="Create new">
+        </fieldset>
+    </form>
+</div>
+<div class="container">
+    <table id="clientsTable" class="clients-table">
+        <caption class="clients-table-caption"><b>Список клиентов</b></caption>
+        <thead class="clients-table-head">
+        <tr>
+            <th>Id</th>
+            <th>Имя</th>
+            <th>Адрес</th>
+            <th>Телефоны</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Добавьте Thymeleaf для отображения данных -->
+        <tr th:each="client : ${clients}">
+            <td th:text="${client.id}"></td>
+            <td th:text="${client.name}"></td>
+            <td th:text="${client.address}"></td>
+            <td>
+                <ul th:each="phone : ${client.phones}">
+                    <li th:text="${phone}"></li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
